@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You 💌</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6f0;
+            font-family: Arial;
+            text-align: center;
+            padding: 20px;
+        }
+        #text {
+            color: #ff3385;
+            font-size: 24px;
+            border-right: 3px solid #ff3385;
+            padding-right: 5px;
+            max-width: 600px;
+            white-space: pre-line;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div id="text"></div>
+
+<script>
+const message = `Hi...
+
+Ang random lang nito, pero gusto ko lang sabihin 😌
+
+Ang saya ng kwentuhan natin kanina.
+Hindi ko namalayan yung oras, parang ang bilis lang ng lahat.
+
+Ewan ko, pero sa bawat salita mo,
+parang unti-unti mo akong napapangiti nang hindi ko namamalayan. 😍
+Gusto ko sana, hinding-hindi na matapos yung pag-uusap natin...
+at sana, ako lang din ang dahilan ng bawat ngiti mo.
+
+And honestly…
+natutuwa ako na nakilala kita.
+
+Sana maulit pa ulit yung ganung moments natin.
+
+Ingat ka lagi ha 🙂
+
+— from Erick na crush na crush ka 💗`;
+
+let index = 0;
+
+function typeEffect() {
+    if (index < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(index);
+        index++;
+        setTimeout(typeEffect, 40);
+    }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>
